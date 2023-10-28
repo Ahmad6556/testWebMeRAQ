@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+div{
+    background-color: rgb(43, 43, 43);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" href="img.png" type="image/x-icon">
+  <title>الصفحة الرئيسية</title>
+</head>
+
+<body id="body">
+  <header>
+    <a href="/add">إضافة عضو</a>
+    <br>
+    <hr>
+  </header>
+
+  <% arrArticle.forEach(item=> { %>
+
+    <article>
+      <div>
+        <h2>
+          الأسم: <%= item.name %>&nbsp;&nbsp;
+
+            الوظيفة: <%= item.job %>&nbsp;&nbsp;
+
+              النقاط: <%= item.points %>&nbsp;&nbsp;
+
+                الأرباح: <%= item.profits %>&nbsp;&nbsp;
+
+                  للموضف: <%= 70/100*item.profits %>&nbsp;&nbsp;
+
+                    للفريق: <%= 30/100*item.profits %>&nbsp;&nbsp;
+
+
+                      <a href="/data/<%= item._id %>">إظهار الكل</a>
+
+        </h2>
+      </div>
+    </article>
+    <% }); %>
+</body>
+
+</html>

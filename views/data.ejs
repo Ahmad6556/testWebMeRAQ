@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: rgb(65, 65, 65);
+            color: white;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        .create {
+            background-color: red;
+            color: white;
+        }
+    </style>
+
+    <title>معلومات <%= objArticle.name %></title>
+
+
+</head>
+
+<body>
+    <header>
+        <a href="/">الصفحة الرئيسية</a>
+        <br>
+        <hr>
+    </header>
+
+    <article>
+        <div>
+            <h2>
+                الأسم: <%= objArticle.name %><br><br>
+
+                    الوظيفة: <%= objArticle.job %><br><br>
+
+                        المنصات: <%= objArticle.pads %><br><br>
+
+                            اسم القناة: <%= objArticle.nameChanel %><br><br>
+
+                                الوضيفة القديمة: <%= objArticle.lastJob %><br><br>
+
+                                    رقم الجوال: <%= objArticle.PhoneNum %><br><br>
+
+                                        النقاط: <%= objArticle.points %><br><br>
+
+                                            الأرباح: <%= objArticle.profits %><br><br>
+
+                                                للموضف: <%= 70/100*objArticle.profits %><br><br>
+
+                                                    للفريق: <%= 30/100*objArticle.profits %><br><br>
+
+            </h2>
+            <h1>
+                <button onclick="Delete()" data-linkid="<%= objArticle._id %>" class="create">
+                    حذف
+                </button>
+                <a href="/data/edit/<%= objArticle._id %>">تعديل</a>
+            </h1>
+        </div>
+    </article>
+
+    <script>
+        const RaqId = document.querySelector(".create").getAttribute("data-linkid")
+        function Delete() {
+            fetch(`/data/${RaqId}`, { method: "Delete" })
+                .than(response => response.json())
+                .than(data => console.log(data))
+                .catch((err) => { console.log(err) })
+        }
+    </script>
+</body>
+
+</html>

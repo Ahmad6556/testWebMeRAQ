@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img.png" type="image/x-icon">
+    <title>تعديل</title>
+    <style>
+        body {
+            background-color: rgb(65, 65, 65);
+            color: white;
+            text-align: center;
+        }
+
+        .text {
+            border-radius: 5px;
+            border-color: none;
+        }
+
+        .Update {
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/">الصفحة الرئيسية</a>
+        <br>
+        <hr>
+    </header>
+
+
+    <form action="/" method="POST">
+        <label for="name">الأسم</label><br>
+        <input dir="rtl" Placeholder="<%= item.name %>" class="text" type="text" id="name" name="name" >
+
+        <br><br>
+
+        <label for="job">الوظيفة</label><br>
+        <input dir="rtl" Placeholder="<%= item.job %>" class="text" type="job" id="job" name="job">
+
+        <br><br>
+
+        <label for="pads">المنصه</label><br>
+        <input dir="rtl" Placeholder="<%= item.pads %>" class="text" type="text" id="pads" name="pads">
+
+        <br><br>
+
+        <label for="nameChanel">أسم القناة</label><br>
+        <input dir="rtl" Placeholder="<%= item.nameChanel %>" class="text" type="text" id="nameChanel" name="nameChanel">
+
+        <br><br>
+
+        <label for="lastJob">الوضيفة القديمة</label><br>
+        <input dir="rtl" Placeholder="<%= item.lastJob %>" class="text" type="text" id="lastJob" name="lastJob">
+
+        <br><br>
+
+        <label for="PhoneNum">رقم الجوال</label><br>
+        <input dir="rtl" Placeholder="<%= item.PhoneNum %>" class="text" type="text" id="PhoneNum" name="PhoneNum" >
+
+        <br><br>
+
+        <label for="points">النقاط</label><br>
+        <input dir="rtl" Placeholder="<%= item.points %>" class="text" type="text" id="points" name="points">
+
+        <br><br>
+
+        <label for="profits">الأرباح</label><br>
+        <input dir="rtl" Placeholder="<%= item.profits %>" class="text" type="text" id="profits" name="profits">
+
+        <br><br>
+
+        <button class="Update">تعديل</button>
+    </form>
+
+</body>
+
+</html>
